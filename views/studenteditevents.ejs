@@ -1,0 +1,53 @@
+<%- include('layout/studentheader')%>
+
+<div class="container">
+    <div class="row">
+        <div class="col-lg-6 mx-auto mt-4">
+            <div class="card shadow">
+                <div class="card-header bg-success">
+                    <h3 class="test-light">Edit Event Details (<%= eventdetail.eventid %>)</h3>
+                </div>
+                <div class="card-body p-4">
+                    <form action="/studentupdateevent/<%= eventdetail._id %>" method="post" id="add-form" enctype="multipart/form-data">
+                        <div class="mb-3">
+                            <label for="eventname">Event Name</label>
+                            <input type="text" name="eventname" class="form-control form-control-lg" value="<%= eventdetail.eventname %>" required />
+                        </div>
+                        <div class="mb-3">
+                            <label for="eventdate">Event Date</label>
+                            <input type="text" name="eventdate" class="form-control form-control-lg" value="<%= eventdetail.eventdate %>" required />
+                        </div>
+                        <div class="mb-3">
+                            <label for="venue">Venue</label>
+                            <input type="text" name="venue" class="form-control form-control-lg" value="<%= eventdetail.venue %>" required />
+                        </div>
+                        <div class="mb-3">
+                            <label for="organised">Organised By</label>
+                            <input type="text" name="organised" class="form-control form-control-lg" value="<%= eventdetail.organised %>" required />
+                        </div>
+                        <div class="mb-3">
+                            <label for="organised">Department</label>
+                            <input type="text" name="department" class="form-control form-control-lg" value="<%= eventdetail.department %>" required />
+                        </div>
+                        <div class="mb-3">
+                            <label for="description">Description</label>
+                            <textarea rows="4" cols="50" name="description" class="form-control form-control-lg" required><%= eventdetail.description %></textarea>
+                        </div>
+                        <div class="mb-3">
+                            <label for="image">Event Image</label>
+                            <input type="file" name="image" class="form-control form-control-lg">
+                            <img src="/<%= eventdetail.image %>" height="150px" style="margin-top: 10px;">
+                        </div>
+                        <input type="hidden" name="old_image" value="<%= eventdetail.image %>"/>
+                        <div class="mb-3">
+                        <div class="mb-3 d-grid">
+                            <input type="submit" name="submit" value="Update Event" class="btn btn-success btn-lg"required />
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<%- include('layout/footer')%>

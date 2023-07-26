@@ -1,0 +1,43 @@
+<%- include('layout/header1')%>
+<br><br><br>
+<div class="container">
+    <div class="row my-4">
+        <h1 style="text-align: center;">List of Books in Library at TCE</h1>
+        <div class="col-lg-12">
+            <div class="table-responsive">
+                <% if(bookdetails!= "") { %>
+                    <table class="table table-striped text-center my-3">
+                        <thead>
+                            <tr class="table-dark">
+                                <th>S. NO</th>
+                                <th>Book Id</th>
+                                <th>Image</th>
+                                <th>Title</th>
+                                <th>Author</th>
+                                <th>Department</th>
+                                <th>Status</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <% bookdetails.forEach((row,index)=>{ %>
+                                <tr>
+                                    <td><%= index+1 %></td>
+                                    <td><%= row.bookid %></td>
+                                    <td><img src="<%= row.image %>" height="70px"></td>
+                                    <td><%= row.bookname %></td>
+                                    <td><%= row.author %></td>
+                                    <td><%= row.department %></td>
+                                    <td><%= row.status %></td>
+                                </tr>
+                            <% }) %>
+                        </tbody>
+                    </table>
+                <% } else { %>
+                   <h1 class="text-center text-secondary mt-5">No Books Found</h1> 
+                <% } %>
+            </div>
+        </div>
+    </div>
+</div>
+
+<%- include('layout/footer1')%>

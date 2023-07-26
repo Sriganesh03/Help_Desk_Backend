@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang = "en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X_UA_Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.2.2/css/bootstrap.min.css" integrity="sha512-CpIKUSyh9QX2+zSdfGP+eWLx23C8Dj9/XmHjZY2uDtfkdLGo0uY12jgcnkX9vXOgYajEKb/jiw67EYm+kBf+6g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/bs4/dt-1.13.1/datatables.min.css"/>
+        <title><%= title %></title>
+        <style>
+            li{
+                padding-right: 10px;
+            }
+        </style>
+    </head>
+    <body>
+        <nav class = "navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class = "container">
+                <a href="#" class="navbar-brand"><i class ="fas fa-code me-2"></i>TCE HELP DESK</a>
+                <button class = 'navbar-toggler' data-bs-target="#my-nav" data-bs-target="collapse" aria-controls="#my-nav" aria-expanded="false" aria-label="TOggle navigation">
+                    <span class="navbar-toggle-icon"></span>
+                </button>
+                <div id = "my-nav" class = "collapse navbar-collapse">
+                    <ul class = "navbar-nav ms-auto">
+                        <!-- <li class = "nav-item active">
+                            <a class="nav-link" href="/"><i class="fas fa-home me-1"></i>Home</a>
+                        </li> -->
+                        <li class = "nav-item active">
+                            <a class="nav-link" href="viewbook"><i class="fa-solid fa-book me-1"></i>Book Details</a>
+                        </li>
+                        <li class = "nav-item active">
+                            <a class="nav-link" href="addbook"><i class="fas fa-user-plus me-1"></i>Add Book </a>
+                        </li>
+                        <li class = "nav-item active">
+                            <a class="nav-link" href="viewevent"><i class="fa fa-calendar me-1" aria-hidden="true"></i>Event Details </a>
+                        </li>
+                        <li class = "nav-item active">
+                            <a class="nav-link" href="addevent"><i class="fas fa-user-plus me-1"></i>Add Events </a>
+                        </li>
+                        <li class = "nav-item active">
+                            <a class="nav-link" href="login"><i class="fas fa-sign-out me-1"></i>Logout</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>

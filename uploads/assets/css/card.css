@@ -1,0 +1,9 @@
+/* Float four columns side by side */
+.row {
+    width: 90%;
+}
+.column {
+    width: 40%;
+    margin: 10px;
+    padding: 0 20px;
+}

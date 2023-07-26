@@ -1,0 +1,55 @@
+<%- include('layout/header')%>
+
+<div class="container">
+    <div class="row">
+        <div class="col-lg-6 mx-auto mt-4 mb-4">
+            <div class="card shadow">
+                <div class="card-header bg-primary">
+                    <h3 class="test-light">Add New Event</h3>
+                </div>
+                <div class="card-body p-4">
+                    <form action="/addevent" method="post" id="add-form" enctype="multipart/form-data">
+                        <div class="mb-3">
+                            <label for="eventid">Event Id</label>
+                            <input type="text" name="eventid" class="form-control form-control-lg" placeholder="Enter Event ID" required />
+                        </div>
+                        <div class="mb-3">
+                            <label for="eventname">Event Name</label>
+                            <input type="text" name="eventname" class="form-control form-control-lg" placeholder="Enter Event Name" required />
+                        </div>
+                        <div class="mb-3">
+                            <label for="eventdate">Event Date</label>
+                            <input type="text" name="eventdate" class="form-control form-control-lg" placeholder="dd/mm/yyyy" required />
+                        </div>
+                        <div class="mb-3">
+                            <label for="venue">Venue</label>
+                            <input type="text" name="venue" class="form-control form-control-lg" placeholder="Enter Venue" required />
+                        </div>
+                        <div class="mb-3">
+                            <label for="organised">Organised By</label>
+                            <input type="text" name="organised" class="form-control form-control-lg" placeholder="Club Name" required />
+                        </div>
+                        <div class="mb-3">
+                            <label for="organised">Department</label>
+                            <input type="text" name="department" class="form-control form-control-lg" placeholder="Department" required />
+                        </div>
+                        <div class="mb-3">
+                            <label for="description">Description</label>
+                            <textarea rows="4" cols="50" name="description" class="form-control form-control-lg" required></textarea>
+                        </div>
+                        <div class="mb-3">
+                            <label for="image">Event Image</label>
+                            <input type="file" name="image" class="form-control form-control-lg" required/>
+                        </div>
+                        
+                        <div class="mb-3 d-grid">
+                            <input type="submit" name="submit" value="Add Event" class="btn btn-primary btn-lg"required />
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<%- include('layout/footer')%>

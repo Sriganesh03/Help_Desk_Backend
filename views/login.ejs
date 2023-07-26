@@ -1,0 +1,36 @@
+<%- include('layout/header3')%>
+
+<div class="wrapper">
+    <header>Login Form</header>
+    <form action="/logininfo" method="post" id="login-form">
+      <div class="field email">
+        <div class="input-area">
+          <input type="email" name="email" placeholder="Email Address" pattern="[a-z0-9._%+-]+@student.tce.edu$" title="Not a College ID" required>
+          <i class="icon fas fa-envelope"></i>
+        </div> 
+      </div>
+      <div class="field password">
+        <div class="input-area">
+          <input type="password" name="password" placeholder="Password" required>
+          <i class="icon fas fa-lock"></i>
+        </div>
+      </div>
+      <div class="field user">
+        <div class="input-area">
+          <input type="text" name="user" placeholder="User" required>
+          <i class="icon fas fa-lock"></i>
+        </div>
+      </div>
+      <div class="pass-txt"><a href="#">Forgot password?</a></div>
+      <input type="submit" value="Login" id="login" name="button">
+    </form>
+    <p><span style= "color: red; font-size: 20px;">OR</span><br>Sign in Using</p>
+    <div class="social-links">
+      <a href="#"><i class="fab fa-facebook-f"></i></a>
+      <a href="#"><i class="fab fa-twitter"></i></a>
+      <a href="#"><i class="fab fa-google"></i></a>
+      <a href="#"><i class="fab fa-linkedin-in"></i></a>
+  </div>
+</div> 
+
+<%- include('layout/footer3')%>

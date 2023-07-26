@@ -1,0 +1,51 @@
+<%- include('layout/header')%>
+
+<div class="container">
+    <div class="row">
+        <div class="col-lg-6 mx-auto mt-4 mb-4">
+            <div class="card shadow">
+                <div class="card-header bg-primary">
+                    <h3 class="test-light">Add New Book</h3>
+                </div>
+                <div class="card-body p-4">
+                    <form action="/addbook" method="post" id="add-form" enctype="multipart/form-data">
+                        <div class="mb-3">
+                            <label for="id">BookId</label>
+                            <input type="text" name="id" class="form-control form-control-lg" placeholder="Enter Book Id" required />
+                        </div>
+                        <div class="mb-3">
+                            <label for="name">Book Name</label>
+                            <input type="text" name="name" class="form-control form-control-lg" placeholder="Enter Book Name" required />
+                        </div>
+                        <div class="mb-3">
+                            <label for="author">Author</label>
+                            <input type="text" name="author" class="form-control form-control-lg" placeholder="Enter Author Name" required />
+                        </div>
+                        <div class="mb-3">
+                            <label for="dept">Department</label>
+                            <input type="text" name="dept" class="form-control form-control-lg" placeholder="Enter Department" required />
+                        </div>
+                        <div class="mb-3">
+                            <label for="image">Book Image</label>
+                            <input type="file" name="image" class="form-control form-control-lg" required/>
+                        </div>
+                        <div class="mb-3">
+                            <label for="status">Status</label>
+                            <div class="mb-3">
+                                <input type="radio" name="status" value="Available"><label>Available&nbsp</label>
+                                <input type="radio" name="status" value="Not Available"><label>Not Available</label>
+                            </div>
+                            
+                        </div>
+                        
+                        <div class="mb-3 d-grid">
+                            <input type="submit" name="submit" value="Add Book" class="btn btn-primary btn-lg"required />
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<%- include('layout/footer')%>
